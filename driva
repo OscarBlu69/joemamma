@@ -1,1 +1,58 @@
 
+/**
+ * Write a description of class ch7proj2d here.
+ *
+ * @author (your name)
+ * @version (a version number or a date)
+ */
+
+import java.util.*;
+
+public class ch7proj2d
+
+{
+    public static void main(String[] args)
+    {
+        //Java code goes here
+        ch7proj2 checker = new ch7proj2();
+        Scanner keyboard = new Scanner(System.in);
+        int count = 1;
+        double userInput = 0;
+        String months[] = {"Invalid month", "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"};
+        double monthRainfall[] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12};
+        System.out.println("Rainfall Calculator");
+        System.out.println("");
+        
+        while(count != 12)
+        {
+           System.out.print("Please enter the rainfall for " + months[count] + ":");
+           userInput = keyboard.nextDouble();
+           System.out.print("\n");
+           if(userInput < 0)
+           {
+               System.out.print("Please enter a valid number");
+               userInput = keyboard.nextDouble();
+               System.out.print("\n");
+               while(userInput < 0)
+               {
+                   System.out.print("Please enter the rainfall for " + months[count] + ":");
+                   userInput = keyboard.nextDouble();
+                   System.out.print("\n");
+               }
+               monthRainfall[count] = userInput;
+               count++;
+           }else
+           {
+               monthRainfall[count] = userInput;
+               count++;
+           }
+           
+        }
+        for(int count1 = 0; count >= monthRainfall.length-1; count++){
+           System.out.print(monthRainfall[count]);
+        }
+        
+
+    }
+}
+
