@@ -23,7 +23,7 @@ public class ch7proj2d
         System.out.println("Rainfall Calculator");
         System.out.println("");
         
-        while(count != 12)
+        while(count != 13)
         {
            System.out.print("Please enter the rainfall for " + months[count] + ":");
            userInput = keyboard.nextDouble();
@@ -41,6 +41,7 @@ public class ch7proj2d
                }
                monthRainfall[count] = userInput;
                count++;
+               
            }else
            {
                monthRainfall[count] = userInput;
@@ -48,11 +49,10 @@ public class ch7proj2d
            }
            
         }
-        for(int count1 = 0; count >= monthRainfall.length-1; count++){
+        for(int count1 = 0; count >= monthRainfall.length; count++){
            System.out.print(monthRainfall[count]);
         }
         
 
     }
 }
-
