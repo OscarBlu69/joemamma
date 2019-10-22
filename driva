@@ -16,10 +16,10 @@ public class ch7proj2d
         //Java code goes here
         ch7proj2 checker = new ch7proj2();
         Scanner keyboard = new Scanner(System.in);
-        int count = 1;
+        int count = 0;
         double userInput = 0;
         String months[] = {"Invalid month", "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"};
-        double monthRainfall[] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12};
+        double[] monthlyRainfall = new double[12];
         System.out.println("Rainfall Calculator");
         System.out.println("");
         
@@ -47,6 +47,7 @@ public class ch7proj2d
                monthRainfall[count] = userInput;
                count++;
            }
+           
            
         }
         for(int count1 = 0; count >= monthRainfall.length; count++){
