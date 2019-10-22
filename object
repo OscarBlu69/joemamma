@@ -25,10 +25,66 @@ public class ch7proj2
      * @param  y  a sample parameter for a method
      * @return    the sum of x and y
      */
-    public int sampleMethod(int y)
+    public int totalRainfall(double array)
     {
         // put your code here
+        int sum = 0;
+        for(int count = 0; count <= array.length-1; count++)
+        {
+            //array[count]+= sum;
+            sum+= array[count];
+        }
+
+        System.out.println("The total monthly rainfall is: "+sum);
+        return x + y;
+    }
+    public int monthlyRainfall(double array)
+    {
+        // put your code here
+        int sum = 0;
+
+        for(int count = 0; count <= array.length-1; count++)
+        {
+            sum+= array[count];
+        }
+        average = sum/12;
+        System.out.println("The average monthly average is: " + average);
+        System.out.println(" ");
+
+        return x + y;
+    }
+    public int mostRain(double array)
+    {
+        // put your code here
+        System.out.print("The month with the highest rainfall is: ");
+        int great = 0;
+        for (int count = 0; count <=array.length-1; count++)
+        {
+            if (array[count]>great)
+            {
+                great = array[count];
+            }
+        }
+        System.out.print(great);
+        System.out.println(" ");
+        return x + y;
+    }
+    public int leastRain(double array)
+    {
+        // put your code here
+        System.out.print("The month with the highest rainfall is: ");
+        int low = 100000;
+        for (int count = 0; count <= array.length-1; count++)
+        {
+            if (array[count]<low)
+            {
+                low = array[count];
+            }
+        }
+        System.out.print(low);
+        System.out.println(" ");
+
         return x + y;
     }
 }
-
+}
